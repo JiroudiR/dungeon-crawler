@@ -7,13 +7,16 @@ public class PlayerController : MonoBehaviour
 {
     private Vector2 moveInput;
     private Rigidbody2D rb;
-    [SerializeField]
+    private SpriteRenderer rbSprite;
     public GameObject projectilePrefab;
     private float moveSpeed = 6f;
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        rbSprite = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -29,12 +32,14 @@ public class PlayerController : MonoBehaviour
     private void Move()
     {
         rb.velocity = moveInput * moveSpeed;
+        animator.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
     }
 
 
 
-    public void onMoveInput(InputAction.CallbackContext context)
+    public void OnMoveInput(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
+        rbSprite.flipX = moveInput.x > 0;
     }
 }
