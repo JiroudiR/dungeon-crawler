@@ -13,7 +13,10 @@ public class YarelisPlayerController : MonoBehaviour
     [SerializeField]
     private bool _isMoving = false;
 
-    public bool IsMoving { get
+
+    public bool IsMoving 
+    {
+        get
         {
             return _isMoving;
         }
@@ -24,23 +27,20 @@ public class YarelisPlayerController : MonoBehaviour
         }
     }
 
-    public bool _isFacingRight = true;
+    [SerializeField]
+    private bool _isRunning = false;
 
-    public bool IsFacingRight 
-    { 
-        get 
+    public bool IsRunning
+    {
+        get
         {
-            return _isFacingRight; 
-        } 
-        private set 
+            return _isRunning;
+        }
+        set
         {
-            if(_isFacingRight != value)
-            {
-                //Flip the local scale to make the player face the opposite direction
-                transform.localScale *= new Vector2(-1, 1);
-            }
-            _isFacingRight = value;
-        } 
+            _isRunning = value;
+            animator.SetBool("isRunning", value);
+        }
     }
 
     Rigidbody2D rb;
@@ -52,30 +52,6 @@ public class YarelisPlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-        
-public class PlayerController : MonoBehaviour
-{
-    private Vector2 moveInput;
-    private Rigidbody2D rb;
-    [SerializeField]
-    public GameObject projectilePrefab;
-    private float moveSpeed = 6f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(moveInput.x * walkSpeed, rb.velocity.y);
@@ -85,39 +61,18 @@ public class PlayerController : MonoBehaviour
     {
         moveInput = context.ReadValue<Vector2>();
 
-        _isMoving = moveInput != Vector2.zero;
-
-        SetFacingDirection(moveInput);
+        IsMoving = moveInput != Vector2.zero;
     }
 
-    private void SetFacingDirection(Vector2 moveInput)
+    public void OnRun(InputAction.CallbackContext context)
     {
-        if(moveInput.x > 0 && !IsFacingRight)
+        if(context.started)
         {
-            // Face the right
-            IsFacingRight = true;
+            IsRunning = true;
         }
-        else if (moveInput.x < 0 && IsFacingRight)
+        else if(context.canceled)
         {
-            // Face the left
-            IsFacingRight = false;
+            IsRunning = false;
         }
-
     }
-    private void FixedUpdate()
-    {
-        Move();
-    }
-
-    private void Move()
-    {
-        rb.velocity = moveInput * moveSpeed;
-    }
-
-
-
-    public void onMoveInput(InputAction.CallbackContext context)
-    {
-        moveInput = context.ReadValue<Vector2>();
-    }
-}}
+}
