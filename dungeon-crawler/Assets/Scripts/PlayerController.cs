@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveInput;
     private Rigidbody2D rb;
     private SpriteRenderer rbSprite;
-    public GameObject projectilePrefab;
     private float moveSpeed = 6f;
     public Animator animator;
     // Start is called before the first frame update
