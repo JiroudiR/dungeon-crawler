@@ -6,11 +6,12 @@ using UnityEngine;
 public class Health_Damage : MonoBehaviour
 {
     public int health = 3;
+    private UIManager uiManager;
     private bool isDead = false;
     // Start is called before the first frame update
     void Start()
     {
-        
+        uiManager = FindObjectOfType<UIManager>();
     }
 
     // Update is called once per frame
@@ -31,6 +32,7 @@ public class Health_Damage : MonoBehaviour
     private void Damage()
     {
         health--;
+        uiManager.SetHealth(health);
         if (health == 0)
         {
             isDead = true;
