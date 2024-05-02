@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     private Vector2 moveInput;
+    private Vector2 jumpInput;
     private Rigidbody2D rb;
     private SpriteRenderer rbSprite;
     private float moveSpeed = 6f;
@@ -40,5 +41,10 @@ public class PlayerController : MonoBehaviour
     {
         moveInput = context.ReadValue<Vector2>();
         rbSprite.flipX = moveInput.x > 0;
+    }
+    public void OnJumpInput(InputAction.CallbackContext context)
+    {
+        jumpInput = context.ReadValue<Vector2>();
+        rbSprite.flipX = jumpInput.x > 0;
     }
 }
