@@ -1067,6 +1067,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1857139226}
   m_CullTransparentMesh: 1
+--- !u!114 &2138567109 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7434163142355587842, guid: 594fd3f11dd120b4fb0c2c42a7176d14, type: 3}
+  m_PrefabInstance: {fileID: 8061502661847707070}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62a725b541046fc43a9fc521edaada2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8061502661847707070
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1078,6 +1089,38 @@ PrefabInstance:
     - target: {fileID: 3509080762550982071, guid: 594fd3f11dd120b4fb0c2c42a7176d14, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490666356332871549, guid: 594fd3f11dd120b4fb0c2c42a7176d14, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6791231412770119204, guid: 594fd3f11dd120b4fb0c2c42a7176d14, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6791231412770119204, guid: 594fd3f11dd120b4fb0c2c42a7176d14, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6791231412770119204, guid: 594fd3f11dd120b4fb0c2c42a7176d14, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2138567109}
+    - target: {fileID: 6791231412770119204, guid: 594fd3f11dd120b4fb0c2c42a7176d14, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6791231412770119204, guid: 594fd3f11dd120b4fb0c2c42a7176d14, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnJumpInput
+      objectReference: {fileID: 0}
+    - target: {fileID: 6791231412770119204, guid: 594fd3f11dd120b4fb0c2c42a7176d14, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6791231412770119204, guid: 594fd3f11dd120b4fb0c2c42a7176d14, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8837141500152407592, guid: 594fd3f11dd120b4fb0c2c42a7176d14, type: 3}
       propertyPath: m_LocalPosition.x
