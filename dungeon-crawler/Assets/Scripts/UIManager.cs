@@ -21,6 +21,8 @@ public class UIManager : MonoBehaviour
 
     public void SetHealthCount()
     {
-        
+        int healthText = FindObjectOfType<Health_Damage>().health;
+        TMP_Text text = GetComponent<TMP_Text>();
+        text.text = healthText.ToString() + " HP";
     }
 }

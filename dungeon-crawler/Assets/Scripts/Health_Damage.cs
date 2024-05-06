@@ -9,7 +9,7 @@ public class Health_Damage : MonoBehaviour
     private UIManager uiManager;
     private void Start()
     {
-        uiManager = GetComponent<UIManager>();
+        uiManager = FindObjectOfType<UIManager>().GetComponent<UIManager>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
