@@ -47,4 +47,8 @@ public class PlayerController : MonoBehaviour
         jumpInput = context.ReadValue<Vector2>();
         rbSprite.flipX = jumpInput.x > 0;
     }
+    public void OnRestartInput()
+    {
+        gameObject.GetComponent<Health_Damage>().Respawn();
+    }
 }
