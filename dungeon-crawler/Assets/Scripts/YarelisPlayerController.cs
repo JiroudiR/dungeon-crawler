@@ -8,7 +8,6 @@ using UnityEngine.InputSystem;
 public class YarelisPlayerController : MonoBehaviour
 {
     public float walkSpeed = 6f;
-    public float runSpeed = 8f;
     Vector2 moveInput;
 
     [SerializeField]
@@ -76,7 +75,6 @@ public class YarelisPlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(moveInput.x * walkSpeed, rb.velocity.y);
-        //rb.velocity = new Vector2(moveInput.x * runSpeed, rb.velocity.y);
     }
 
     public void OnMove(InputAction.CallbackContext context)
