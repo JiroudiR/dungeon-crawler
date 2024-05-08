@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class YarelisPlayerController : MonoBehaviour
 {
-    public float walkSpeed = 5f;
+    public float walkSpeed = 6f;
     Vector2 moveInput;
 
     [SerializeField]
@@ -43,6 +43,26 @@ public class YarelisPlayerController : MonoBehaviour
         }
     }
 
+    public bool _isFacingRight = true;
+
+    public bool IsFacingRight
+    {
+        get
+        {
+            return _isFacingRight;
+        }
+        private set
+        {
+            if(_isFacingRight != value)
+            {
+                //Flip the local scale to make the player face the opposite direction
+                transform.localScale *= new Vector2(-1, 1);
+            }
+
+            _isFacingRight = value;
+        }
+    }
+
     Rigidbody2D rb;
     Animator animator;
 
@@ -62,6 +82,22 @@ public class YarelisPlayerController : MonoBehaviour
         moveInput = context.ReadValue<Vector2>();
 
         IsMoving = moveInput != Vector2.zero;
+
+        SetFacingDirection(moveInput);
+    }
+
+    private void SetFacingDirection(Vector2 moveInput)
+    {
+        if (moveInput.x > 0 && !IsFacingRight)
+        {
+            // Face the right
+            IsFacingRight = true;
+        }
+        else if (moveInput.x < 0 && IsFacingRight)
+        {
+            // Face the left
+            IsFacingRight = false;
+        }
     }
 
     public void OnRun(InputAction.CallbackContext context)
