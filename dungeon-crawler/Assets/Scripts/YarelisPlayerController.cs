@@ -9,6 +9,7 @@ public class YarelisPlayerController : MonoBehaviour
 {
     public float walkSpeed = 6f;
     Vector2 moveInput;
+    public float jump;
 
     [SerializeField]
     private bool _isMoving = false;
@@ -40,6 +41,22 @@ public class YarelisPlayerController : MonoBehaviour
         {
             _isRunning = value;
             animator.SetBool("isRunning", value);
+        }
+    }
+
+    [SerializeField]
+    private bool _isJumping = false;
+
+    public bool IsJumping
+    {
+        get
+        {
+            return _isJumping;
+        }
+        set
+        {
+            _isJumping = value;
+            animator.SetBool("isJumping", value);
         }
     }
 
@@ -109,6 +126,26 @@ public class YarelisPlayerController : MonoBehaviour
         else if(context.canceled)
         {
             IsRunning = false;
+        }
+    }
+
+    public void OnJump(InputAction.CallbackContext context)
+    {
+        if(context.started)
+        {
+            IsJumping = true;
+        }
+        else if(context.canceled)
+        {
+            IsJumping = false;
+        }
+    }
+
+    void Update()
+    {
+        if(Input.GetButtonDown("Jump"))
+        {
+            rb.AddForce(new Vector2(rb.velocity.x, jump));
         }
     }
 }
