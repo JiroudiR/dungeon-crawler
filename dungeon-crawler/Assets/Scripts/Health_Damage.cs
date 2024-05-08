@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -12,6 +13,8 @@ public class Health_Damage : MonoBehaviour
     private Vector3 respawnPoint;
     public GameObject gameOver;
     private UIManager uiManager;
+    internal int teamId;
+
     private void Start()
     {
         uiManager = FindObjectOfType<UIManager>().GetComponent<UIManager>();
@@ -53,5 +56,10 @@ public class Health_Damage : MonoBehaviour
             gameObject.SetActive(true);
             transform.position = respawnPoint;
         }
+    }
+
+    internal void TakeDamage(int damageAmount)
+    {
+        throw new NotImplementedException();
     }
 }
