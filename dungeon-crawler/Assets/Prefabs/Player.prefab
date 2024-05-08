@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2895768318989731726}
   - component: {fileID: 8110070364177879886}
   - component: {fileID: 3379971197998725441}
+  - component: {fileID: -1671785542080955959}
   - component: {fileID: 1858163986930041497}
   - component: {fileID: 8785078842339572004}
   - component: {fileID: 4385698622795226081}
@@ -215,11 +216,30 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: cde2b1f8-8f0a-4c17-9fd7-281818c7bb06
     m_ActionName: Player/Run[/Keyboard/shift]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7ca8df89-aa6b-4dde-a692-e9eedb4aeb9f
+    m_ActionName: Player/Restart[/Keyboard/r]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &-1671785542080955959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3780587716706089865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35d4d26d9d45e91408b192d8462bd9e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+  lives: 3
+  gameOver: {fileID: 0}
 --- !u!114 &1858163986930041497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,7 +253,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 5
-  runSpeed: 8
   _isMoving: 0
   _isRunning: 0
   _isFacingRight: 1
