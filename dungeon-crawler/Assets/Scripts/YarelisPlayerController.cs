@@ -44,22 +44,6 @@ public class YarelisPlayerController : MonoBehaviour
         }
     }
 
-    [SerializeField]
-    private bool _isJumping = false;
-
-    public bool IsJumping
-    {
-        get
-        {
-            return _isJumping;
-        }
-        set
-        {
-            _isJumping = value;
-            animator.SetBool("isJumping", value);
-        }
-    }
-
     public bool _isFacingRight = true;
 
     public bool IsFacingRight
@@ -129,8 +113,9 @@ public class YarelisPlayerController : MonoBehaviour
         }
     }
 
-    public void OnJump(InputAction.CallbackContext context)
+    public void OnRestartInput()
     {
+<<<<<<< HEAD
         if(context.started)
         {
             IsJumping = true;
@@ -142,4 +127,8 @@ public class YarelisPlayerController : MonoBehaviour
     }
     
     
+=======
+        gameObject.GetComponent<Health_Damage>().Respawn();
+    }
+>>>>>>> f6e5e09067ed2ec7a439a66891184785d72d41f2
 }

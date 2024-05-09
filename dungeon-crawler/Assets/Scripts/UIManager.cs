@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     public GameObject fillArea;
     public TMP_Text healthCount;
     public TMP_Text livesCount;
+    public GameObject gameOverText;
 
     public void SetHealth(int health)
     {
@@ -30,5 +31,11 @@ public class UIManager : MonoBehaviour
     {
         int livesText = FindObjectOfType<Health_Damage>().lives;
         livesCount.text = "Lives: " + livesText.ToString();
+    }
+
+    public void SetGameOverText()
+    {
+        gameOverText.SetActive(true);
+        gameOverText = FindObjectOfType<Health_Damage>().gameOver;
     }
 }
