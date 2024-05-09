@@ -111,4 +111,9 @@ public class YarelisPlayerController : MonoBehaviour
             IsRunning = false;
         }
     }
+
+    public void OnRestartInput()
+    {
+        gameObject.GetComponent<Health_Damage>().Respawn();
+    }
 }

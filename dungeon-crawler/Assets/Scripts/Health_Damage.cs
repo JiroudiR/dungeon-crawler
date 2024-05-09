@@ -3,13 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class Health_Damage : MonoBehaviour
 {
     public int health = 3;
     public int lives = 3;
     private bool isAlive = true;
+    private bool isGameOver = false;
     private Vector3 respawnPoint;
     public GameObject gameOver;
     private UIManager uiManager;
@@ -37,15 +37,16 @@ public class Health_Damage : MonoBehaviour
         uiManager.SetHealth(health);
         uiManager.SetHealthCount();
         uiManager.SetLivesCount();
-        if (health == 0)
+        if (health <= 0)
         {
             isAlive = false;
             lives--;
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
+            uiManager.SetGameOverText();
         }
         if (lives == 0)
         {
-            gameOver.SetActive(true);
+            isGameOver = true;
         }
     }
 
@@ -55,6 +56,10 @@ public class Health_Damage : MonoBehaviour
         {
             gameObject.SetActive(true);
             transform.position = respawnPoint;
+        }
+        if (lives != 0)
+        {
+            isGameOver = false;
         }
     }
 
