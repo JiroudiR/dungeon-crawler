@@ -114,6 +114,9 @@ public class YarelisPlayerController : MonoBehaviour
 
     public void OnRestartInput()
     {
-        gameObject.GetComponent<Health_Damage>().Respawn();
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            gameObject.GetComponent<Health_Damage>().Respawn();
+        }
     }
 }
