@@ -8,8 +8,8 @@ using UnityEngine.InputSystem;
 public class YarelisPlayerController : MonoBehaviour
 {
     public float walkSpeed = 6f;
+    public float runSpeed = 8f;
     Vector2 moveInput;
-    public float jump;
 
     [SerializeField]
     private bool _isMoving = false;
@@ -140,12 +140,6 @@ public class YarelisPlayerController : MonoBehaviour
             IsJumping = false;
         }
     }
-
-    void Update()
-    {
-        if(Input.GetButtonDown("Jump"))
-        {
-            rb.AddForce(new Vector2(rb.velocity.x, jump));
-        }
-    }
+    
+    
 }
