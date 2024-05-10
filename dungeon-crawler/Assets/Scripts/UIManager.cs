@@ -11,7 +11,6 @@ public class UIManager : MonoBehaviour
     public TMP_Text healthCount;
     public TMP_Text livesCount;
     public GameObject gameOverText;
-    public GameObject youHaveDiedText;
 
     public void SetHealth(int health)
     {
@@ -34,13 +33,9 @@ public class UIManager : MonoBehaviour
         livesCount.text = "Lives: " + livesText.ToString();
     }
 
-    public void SetYouHaveDiedText(bool input)
+    public void SetGameOverText()
     {
-        youHaveDiedText.SetActive(input);
-    }
-
-    public void SetGameOverText(bool input)
-    {
-        gameOverText.SetActive(input);
+        gameOverText.SetActive(true);
+        gameOverText = FindObjectOfType<Health_Damage>().gameOver;
     }
 }

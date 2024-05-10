@@ -11,6 +11,7 @@ public class Health_Damage : MonoBehaviour
     private bool isAlive = true;
     private bool isGameOver = false;
     private Vector3 respawnPoint;
+    public GameObject gameOver;
     private UIManager uiManager;
     internal int teamId;
 
@@ -36,32 +37,23 @@ public class Health_Damage : MonoBehaviour
         uiManager.SetHealth(health);
         uiManager.SetHealthCount();
         uiManager.SetLivesCount();
-        if (health == 0)
+        if (health <= 0)
         {
             isAlive = false;
             lives--;
-            if (lives != 0)
-            {
-                uiManager.SetYouHaveDiedText(true);
-            }
             //gameObject.SetActive(false);
+            uiManager.SetGameOverText();
         }
         if (lives == 0)
         {
             isGameOver = true;
-            uiManager.SetGameOverText(true);
         }
     }
 
     public void Respawn()
     {
-        if (!isAlive && !isGameOver)
+        if (!isAlive)
         {
-            isAlive = true;
-            health = 3;
-            uiManager.SetYouHaveDiedText(false);
-            uiManager.SetHealth(health);
-            uiManager.SetHealthCount();
             gameObject.SetActive(true);
             transform.position = respawnPoint;
         }

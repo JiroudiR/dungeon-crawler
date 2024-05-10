@@ -113,25 +113,26 @@ public class YarelisPlayerController : MonoBehaviour
         }
     }
 
-    //public void OnRestartInput()
-    //{
-
-    //    if(context.started)
-    //    {
-    //        IsJumping = true;
-    //    }
-    //    else if(context.canceled)
-    //    {
-    //        IsJumping = false;
-    //    }
-    //}
-
+    public void OnRestartInput()
+    {
+<<<<<<< HEAD
+        if(context.started)
+        {
+            IsJumping = true;
+        }
+        else if(context.canceled)
+        {
+            IsJumping = false;
+        }
+    }
+<<<<<<< HEAD
     
     
-
-    //    gameObject.GetComponent<Health_Damage>().Respawn();
-    //}
-
+=======
+        gameObject.GetComponent<Health_Damage>().Respawn();
+    }
+>>>>>>> f6e5e09067ed2ec7a439a66891184785d72d41f2
+=======
 
     void Update()
     {
@@ -140,5 +141,5 @@ public class YarelisPlayerController : MonoBehaviour
             rb.AddForce(new Vector2(rb.velocity.x, jump));
         }
     }
-
+>>>>>>> parent of d6ad192 (05/09)
 }
