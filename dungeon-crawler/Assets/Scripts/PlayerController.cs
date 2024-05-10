@@ -8,9 +8,12 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveInput;
     private Vector2 jumpInput;
     private Rigidbody2D rb;
+    public float jumpSpeed = 8f; 
     private SpriteRenderer rbSprite;
     private float moveSpeed = 6f;
     public Animator animator;
+    private Rigidbody2D player;
+    private float direction = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +25,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetButtonDown("Jump"))
+        {
+            player.velocity = new Vector2(player.velocity.x, jumpSpeed);
+        }
     }
     private void FixedUpdate()
     {
