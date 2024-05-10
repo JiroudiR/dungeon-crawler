@@ -9,6 +9,7 @@ public class YarelisPlayerController : MonoBehaviour
 {
     public float walkSpeed = 6f;
     Vector2 moveInput;
+    public float jump;
 
     [SerializeField]
     private bool _isMoving = false;
@@ -112,11 +113,32 @@ public class YarelisPlayerController : MonoBehaviour
         }
     }
 
-    public void OnRestartInput()
+    //public void OnRestartInput()
+    //{
+
+    //    if(context.started)
+    //    {
+    //        IsJumping = true;
+    //    }
+    //    else if(context.canceled)
+    //    {
+    //        IsJumping = false;
+    //    }
+    //}
+
+    
+    
+
+    //    gameObject.GetComponent<Health_Damage>().Respawn();
+    //}
+
+
+    void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if(Input.GetButtonDown("Jump"))
         {
-            gameObject.GetComponent<Health_Damage>().Respawn();
+            rb.AddForce(new Vector2(rb.velocity.x, jump));
         }
     }
+
 }
