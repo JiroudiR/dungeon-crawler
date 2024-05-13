@@ -11,16 +11,13 @@ public class UIManager : MonoBehaviour
     public TMP_Text healthCount;
     public TMP_Text livesCount;
     public GameObject gameOverText;
-<<<<<<< Updated upstream
-=======
     public GameObject youHaveDiedText;
-    private Health_Damage hDScript;
+    public GameObject player;
 
     private void Start()
     {
-        hDScript = FindObjectOfType<YarelisPlayerController>().GetComponent<Health_Damage>();
+        
     }
->>>>>>> Stashed changes
 
     public void SetHealth(int health)
     {
@@ -29,7 +26,7 @@ public class UIManager : MonoBehaviour
         {
             fillArea.SetActive(false);
         }
-        if (hDScript.isAlive)
+        if (player.GetComponent<Health_Damage>().isAlive)
         {
             fillArea.SetActive(true);
         }
@@ -47,9 +44,14 @@ public class UIManager : MonoBehaviour
         livesCount.text = "Lives: " + livesText.ToString();
     }
 
-    public void SetGameOverText()
+    public void SetYouHaveDiedText(bool input)
     {
-        gameOverText.SetActive(true);
-        gameOverText = FindObjectOfType<Health_Damage>().gameOver;
+        youHaveDiedText.SetActive(input);
+    }
+
+    public void SetGameOverText(bool input)
+    {
+        gameOverText.SetActive(input);
+        //gameOverText = FindObjectOfType<Health_Damage>().gameOver;
     }
 }
