@@ -223,7 +223,23 @@ MonoBehaviour:
     m_ActionId: cde2b1f8-8f0a-4c17-9fd7-281818c7bb06
     m_ActionName: Player/Run[/Keyboard/shift]
   - m_PersistentCalls:
+<<<<<<< Updated upstream
       m_Calls: []
+=======
+      m_Calls:
+      - m_Target: {fileID: 1858163986930041497}
+        m_TargetAssemblyTypeName: YarelisPlayerController, Assembly-CSharp
+        m_MethodName: OnRestartInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+>>>>>>> Stashed changes
     m_ActionId: 7ca8df89-aa6b-4dde-a692-e9eedb4aeb9f
     m_ActionName: Player/Restart[/Keyboard/r]
   m_NeverAutoSwitchControlSchemes: 0
@@ -265,6 +281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 5
+  jump: 0
   _isMoving: 0
   _isRunning: 0
   _isFacingRight: 1
@@ -282,7 +299,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   lives: 3
-  gameOver: {fileID: 0}
 --- !u!60 &4385698622795226081
 PolygonCollider2D:
   m_ObjectHideFlags: 0

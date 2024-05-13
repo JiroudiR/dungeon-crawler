@@ -11,6 +11,16 @@ public class UIManager : MonoBehaviour
     public TMP_Text healthCount;
     public TMP_Text livesCount;
     public GameObject gameOverText;
+<<<<<<< Updated upstream
+=======
+    public GameObject youHaveDiedText;
+    private Health_Damage hDScript;
+
+    private void Start()
+    {
+        hDScript = FindObjectOfType<YarelisPlayerController>().GetComponent<Health_Damage>();
+    }
+>>>>>>> Stashed changes
 
     public void SetHealth(int health)
     {
@@ -18,6 +28,10 @@ public class UIManager : MonoBehaviour
         if (health == 0)
         {
             fillArea.SetActive(false);
+        }
+        if (hDScript.isAlive)
+        {
+            fillArea.SetActive(true);
         }
     }
 

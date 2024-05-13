@@ -8,7 +8,7 @@ public class Health_Damage : MonoBehaviour
 {
     public int health = 3;
     public int lives = 3;
-    private bool isAlive = true;
+    [HideInInspector] public bool isAlive = true;
     private bool isGameOver = false;
     private Vector3 respawnPoint;
     public GameObject gameOver;
@@ -18,6 +18,9 @@ public class Health_Damage : MonoBehaviour
     private void Start()
     {
         uiManager = FindObjectOfType<UIManager>().GetComponent<UIManager>();
+        uiManager.SetHealth(health);
+        uiManager.SetHealthCount();
+        uiManager.SetLivesCount();
         respawnPoint = transform.position;
     }
 
@@ -27,6 +30,11 @@ public class Health_Damage : MonoBehaviour
         {
             InflictDamage();
         }
+        if (lives == 0)
+        {
+            isGameOver = true;
+            uiManager.SetGameOverText(true);
+        }
         Debug.Log("Health: " + health);
         Debug.Log("Lives: " + lives);
     }
@@ -34,20 +42,30 @@ public class Health_Damage : MonoBehaviour
     private void InflictDamage()
     {
         health--;
+<<<<<<< Updated upstream
         uiManager.SetHealth(health);
         uiManager.SetHealthCount();
         uiManager.SetLivesCount();
         if (health <= 0)
+=======
+        if (health == 0)
+>>>>>>> Stashed changes
         {
             isAlive = false;
             lives--;
             //gameObject.SetActive(false);
             uiManager.SetGameOverText();
         }
+<<<<<<< Updated upstream
         if (lives == 0)
         {
             isGameOver = true;
         }
+=======
+        uiManager.SetHealth(health);
+        uiManager.SetHealthCount();
+        uiManager.SetLivesCount();
+>>>>>>> Stashed changes
     }
 
     public void Respawn()
