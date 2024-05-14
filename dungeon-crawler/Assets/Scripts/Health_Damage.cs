@@ -34,6 +34,7 @@ public class Health_Damage : MonoBehaviour
         {
             isGameOver = true;
             uiManager.SetGameOverText(true);
+            uiManager.SetYouHaveDiedText(false);
         }
         Debug.Log("Health: " + health);
         Debug.Log("Lives: " + lives);
@@ -45,16 +46,16 @@ public class Health_Damage : MonoBehaviour
         uiManager.SetHealth(health);
         uiManager.SetHealthCount();
         uiManager.SetLivesCount();
+        if (lives == 0)
+        {
+            isGameOver = true;
+        }
         if (health == 0)
         {
             isAlive = false;
             lives--;
             //gameObject.SetActive(false);
             uiManager.SetYouHaveDiedText(true);
-        }
-        if (lives == 0)
-        {
-            isGameOver = true;
         }
         uiManager.SetHealth(health);
         uiManager.SetHealthCount();
