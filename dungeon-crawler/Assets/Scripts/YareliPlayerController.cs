@@ -3,9 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
-[RequireComponent(typeof(Rigidbody2D))]
-public class YarelisPlayerController : MonoBehaviour
+public class YareliPlayerController : MonoBehaviour
 {
     public float walkSpeed = 6f;
     Vector2 moveInput;
@@ -113,17 +111,17 @@ public class YarelisPlayerController : MonoBehaviour
     }
 
 
-    public void OnRestartInput()
-    {
-        gameObject.GetComponent<Health_Damage>().Respawn();
-    }
+    //public void OnRestartInput()
+    //{
+     //   gameObject.GetComponent<Health_Damage>().Respawn();
+    //}
 
-    public void OnRestartInput(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-        {
-            gameObject.GetComponent<Health_Damage>().Respawn();
-        }
+    //public void OnRestartInput(InputAction.CallbackContext context)
+    //{
+      //  if (context.performed)
+       // {
+         //   gameObject.GetComponent<Health_Damage>().Respawn();
+      //  }
     
-    }
+   // }
 }

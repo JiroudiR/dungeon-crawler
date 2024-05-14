@@ -42,30 +42,30 @@ public class Health_Damage : MonoBehaviour
     private void InflictDamage()
     {
         health--;
-<<<<<<< Updated upstream
+
         uiManager.SetHealth(health);
         uiManager.SetHealthCount();
         uiManager.SetLivesCount();
         if (health <= 0)
-=======
+
         if (health == 0)
->>>>>>> Stashed changes
+
         {
             isAlive = false;
             lives--;
             //gameObject.SetActive(false);
             uiManager.SetGameOverText();
         }
-<<<<<<< Updated upstream
+
         if (lives == 0)
         {
             isGameOver = true;
         }
-=======
+
         uiManager.SetHealth(health);
         uiManager.SetHealthCount();
         uiManager.SetLivesCount();
->>>>>>> Stashed changes
+
     }
 
     public void Respawn()
