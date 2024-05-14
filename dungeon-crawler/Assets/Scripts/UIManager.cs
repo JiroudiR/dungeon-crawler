@@ -11,13 +11,23 @@ public class UIManager : MonoBehaviour
     public TMP_Text healthCount;
     public TMP_Text livesCount;
     public GameObject gameOverText;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 00f15b74d29d622d1c7fbc4e781e2d260b3f2056
     public GameObject youHaveDiedText;
     public GameObject player;
 
     private void Start()
     {
+<<<<<<< HEAD
+        hDScript = FindObjectOfType<YareliPlayerController>().GetComponent<Health_Damage>();
+    }
+
+=======
         
     }
+>>>>>>> 00f15b74d29d622d1c7fbc4e781e2d260b3f2056
 
     public void SetHealth(int health)
     {
