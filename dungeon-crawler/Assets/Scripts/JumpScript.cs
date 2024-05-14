@@ -19,7 +19,12 @@ public class JumpScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+
+    }
+
+    public void OnJumpInput(InputAction.CallbackContext context)
+    {
+        if (context.performed)
         {
             player.velocity = new Vector2(player.velocity.x, jumpSpeed);
         }
