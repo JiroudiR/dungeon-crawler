@@ -86,12 +86,12 @@ public class YareliPlayerController : MonoBehaviour
 
     private void SetFacingDirection(Vector2 moveInput)
     {
-        if (moveInput.x > 0 && !IsFacingRight)
+        if (moveInput.x < 0 && !IsFacingRight)
         {
             // Face the right
             IsFacingRight = true;
         }
-        else if (moveInput.x < 0 && IsFacingRight)
+        else if (moveInput.x > 0 && IsFacingRight)
         {
             // Face the left
             IsFacingRight = false;

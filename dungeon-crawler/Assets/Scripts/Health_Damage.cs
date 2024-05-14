@@ -11,7 +11,7 @@ public class Health_Damage : MonoBehaviour
     [HideInInspector] public bool isAlive = true;
     private bool isGameOver = false;
     private Vector3 respawnPoint;
-    public GameObject gameOver;
+    //public GameObject gameOver;
     private UIManager uiManager;
     internal int teamId;
 
@@ -34,6 +34,7 @@ public class Health_Damage : MonoBehaviour
         {
             isGameOver = true;
             uiManager.SetGameOverText(true);
+            uiManager.SetYouHaveDiedText(false);
         }
         Debug.Log("Health: " + health);
         Debug.Log("Lives: " + lives);
@@ -42,6 +43,7 @@ public class Health_Damage : MonoBehaviour
     private void InflictDamage()
     {
         health--;
+<<<<<<< HEAD
 
         uiManager.SetHealth(health);
         uiManager.SetHealthCount();
@@ -57,21 +59,44 @@ public class Health_Damage : MonoBehaviour
             uiManager.SetGameOverText();
         }
 
+=======
+        uiManager.SetHealth(health);
+        uiManager.SetHealthCount();
+        uiManager.SetLivesCount();
+>>>>>>> 00f15b74d29d622d1c7fbc4e781e2d260b3f2056
         if (lives == 0)
         {
             isGameOver = true;
         }
+<<<<<<< HEAD
 
         uiManager.SetHealth(health);
         uiManager.SetHealthCount();
         uiManager.SetLivesCount();
 
+=======
+        if (health == 0)
+        {
+            isAlive = false;
+            lives--;
+            //gameObject.SetActive(false);
+            uiManager.SetYouHaveDiedText(true);
+        }
+        uiManager.SetHealth(health);
+        uiManager.SetHealthCount();
+        uiManager.SetLivesCount();
+>>>>>>> 00f15b74d29d622d1c7fbc4e781e2d260b3f2056
     }
 
     public void Respawn()
     {
-        if (!isAlive)
+        if (!isAlive && !isGameOver)
         {
+            isAlive = true;
+            health = 3;
+            uiManager.SetYouHaveDiedText(false);
+            uiManager.SetHealth(health);
+            uiManager.SetHealthCount();
             gameObject.SetActive(true);
             transform.position = respawnPoint;
         }

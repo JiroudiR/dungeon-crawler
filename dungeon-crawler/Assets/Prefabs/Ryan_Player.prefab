@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 5490666356332871549}
   - component: {fileID: 6791231412770119204}
   - component: {fileID: 6040551469916592094}
-  - component: {fileID: 7434163142355587842}
+  - component: {fileID: 8953108541550529648}
   - component: {fileID: 6701159661734160102}
+  - component: {fileID: -2750253199118406399}
   - component: {fileID: 540762259620049441}
   m_Layer: 0
   m_Name: Ryan_Player
@@ -105,7 +106,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 5
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -144,9 +145,9 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7434163142355587842}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: OnMoveInput
+      - m_Target: {fileID: 8953108541550529648}
+        m_TargetAssemblyTypeName: YarelisPlayerController, Assembly-CSharp
+        m_MethodName: OnMove
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -159,7 +160,19 @@ MonoBehaviour:
     m_ActionId: aed756d6-d32c-4b73-a37b-4714b2a306aa
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -2750253199118406399}
+        m_TargetAssemblyTypeName: JumpScript, Assembly-CSharp
+        m_MethodName: OnJumpInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 07b9fc9e-00a6-4919-8567-f25078a64585
     m_ActionName: Player/Jump[/Keyboard/space]
   - m_PersistentCalls:
@@ -207,9 +220,37 @@ MonoBehaviour:
     m_ActionId: b5696c29-20b9-444b-b10a-e6c6efa97431
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8953108541550529648}
+        m_TargetAssemblyTypeName: YarelisPlayerController, Assembly-CSharp
+        m_MethodName: OnRun
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: cde2b1f8-8f0a-4c17-9fd7-281818c7bb06
     m_ActionName: Player/Run[/Keyboard/shift]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6701159661734160102}
+        m_TargetAssemblyTypeName: Health_Damage, Assembly-CSharp
+        m_MethodName: Respawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7ca8df89-aa6b-4dde-a692-e9eedb4aeb9f
+    m_ActionName: Player/Restart[/Keyboard/r]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -236,7 +277,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7434163142355587842
+--- !u!114 &8953108541550529648
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -245,10 +286,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3509080762550982071}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62a725b541046fc43a9fc521edaada2c, type: 3}
+  m_Script: {fileID: 11500000, guid: ba19190c487005d4b91eaa7192f21148, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 6040551469916592094}
+  walkSpeed: 6
+  _isMoving: 0
+  _isRunning: 0
+  _isFacingRight: 1
 --- !u!114 &6701159661734160102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,6 +306,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
+  lives: 3
+  isAlive: 1
+--- !u!114 &-2750253199118406399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3509080762550982071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55c92b0df7b703942992b05b4972c2cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 5490666356332871549}
+  jumpSpeed: 8
 --- !u!60 &540762259620049441
 PolygonCollider2D:
   m_ObjectHideFlags: 0
