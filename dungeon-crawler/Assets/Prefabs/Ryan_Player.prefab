@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5490666356332871549}
   - component: {fileID: 6791231412770119204}
   - component: {fileID: 6040551469916592094}
-  - component: {fileID: 8953108541550529648}
+  - component: {fileID: 8916356501194898899}
   - component: {fileID: 6701159661734160102}
   - component: {fileID: -2750253199118406399}
   - component: {fileID: 540762259620049441}
@@ -145,8 +145,8 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8953108541550529648}
-        m_TargetAssemblyTypeName: YarelisPlayerController, Assembly-CSharp
+      - m_Target: {fileID: 8916356501194898899}
+        m_TargetAssemblyTypeName: YareliPlayerController, Assembly-CSharp
         m_MethodName: OnMove
         m_Mode: 0
         m_Arguments:
@@ -221,8 +221,8 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8953108541550529648}
-        m_TargetAssemblyTypeName: YarelisPlayerController, Assembly-CSharp
+      - m_Target: {fileID: 8916356501194898899}
+        m_TargetAssemblyTypeName: YareliPlayerController, Assembly-CSharp
         m_MethodName: OnRun
         m_Mode: 0
         m_Arguments:
@@ -277,7 +277,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8953108541550529648
+--- !u!114 &8916356501194898899
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -286,7 +286,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3509080762550982071}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba19190c487005d4b91eaa7192f21148, type: 3}
+  m_Script: {fileID: 11500000, guid: 40ccdb2239a623e49ae55ef6b8a1b1d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 6

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Health_Damage : MonoBehaviour
+public class Player_HD : MonoBehaviour
 {
     public int health = 3;
     public int lives = 3;
@@ -47,15 +47,13 @@ public class Health_Damage : MonoBehaviour
         uiManager.SetHealth(health);
         uiManager.SetHealthCount();
         uiManager.SetLivesCount();
-        if (health <= 0)
-
         if (health == 0)
 
         {
             isAlive = false;
             lives--;
             //gameObject.SetActive(false);
-            uiManager.SetGameOverText();
+            uiManager.SetYouHaveDiedText(true);
         }
 
         uiManager.SetHealth(health);
@@ -65,21 +63,6 @@ public class Health_Damage : MonoBehaviour
         {
             isGameOver = true;
         }
-
-        uiManager.SetHealth(health);
-        uiManager.SetHealthCount();
-        uiManager.SetLivesCount();
-
-        if (health == 0)
-        {
-            isAlive = false;
-            lives--;
-            //gameObject.SetActive(false);
-            uiManager.SetYouHaveDiedText(true);
-        }
-        uiManager.SetHealth(health);
-        uiManager.SetHealthCount();
-        uiManager.SetLivesCount();
     }
 
     public void Respawn()
