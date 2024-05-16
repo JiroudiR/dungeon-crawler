@@ -49,6 +49,6 @@ public class PlayerController : MonoBehaviour
     }
     public void OnRestartInput()
     {
-        gameObject.GetComponent<Health_Damage>().Respawn();
+        gameObject.GetComponent<Player_HD>().Respawn();
     }
 }

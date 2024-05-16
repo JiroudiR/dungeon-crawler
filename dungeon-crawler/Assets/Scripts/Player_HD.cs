@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Health_Damage : MonoBehaviour
+public class Player_HD : MonoBehaviour
 {
     public int health = 3;
     public int lives = 3;
