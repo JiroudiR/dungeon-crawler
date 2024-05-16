@@ -11,9 +11,9 @@ public class UIManager : MonoBehaviour
     public TMP_Text healthCount;
     public TMP_Text livesCount;
     public GameObject gameOverText;
-
     public GameObject youHaveDiedText;
     public GameObject player;
+    private Health_Damage hDScript;
 
     private void Start()
     {
