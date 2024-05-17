@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7879024924151539774}
   - component: {fileID: 9043655321771792397}
   - component: {fileID: -93514672509523762}
+  - component: {fileID: 8632955357802599412}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -194,3 +195,16 @@ PolygonCollider2D:
     - - {x: 0.0625, y: -0.546875}
       - {x: 0.0625, y: -0.703125}
   m_UseDelaunayMesh: 0
+--- !u!114 &8632955357802599412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303075433268564294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cd77e33fec960843a5e3009f9f1b025, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
