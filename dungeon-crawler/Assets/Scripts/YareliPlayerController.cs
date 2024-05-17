@@ -63,6 +63,8 @@ public class YareliPlayerController : MonoBehaviour
 
     Rigidbody2D rb;
     Animator animator;
+    public GameObject projectilePrefab;
+    public Transform firePoint;
 
     private void Awake()
     {
@@ -110,18 +112,12 @@ public class YareliPlayerController : MonoBehaviour
         }
     }
 
-
-    //public void OnRestartInput()
-    //{
-     //   gameObject.GetComponent<Health_Damage>().Respawn();
-    //}
-
-    //public void OnRestartInput(InputAction.CallbackContext context)
-    //{
-      //  if (context.performed)
-       // {
-         //   gameObject.GetComponent<Health_Damage>().Respawn();
-      //  }
-    
-   // }
+    public void OnFireInput(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
+            Debug.Log("Shots fired");
+        }
+    }
 }
