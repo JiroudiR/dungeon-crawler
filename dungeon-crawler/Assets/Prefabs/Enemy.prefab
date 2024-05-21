@@ -311,12 +311,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   enemyState: 0
-  wallTestLeft: {fileID: 0}
-  wallTestRight: {fileID: 0}
-  leftEdge: {fileID: 0}
-  rightEdge: {fileID: 0}
-  walkDirection: 2
-  willTurnAroundAtEdge: 1
+  wallTestLeft: {fileID: 7522804458624518651}
+  wallTestRight: {fileID: 4965254931161023803}
+  leftEdge: {fileID: 6761797682339787962}
+  rightEdge: {fileID: 2848959573549344180}
+  walkDirection: 0
+  willTurnAroundAtEdge: 0
 --- !u!114 &1360848746471689971
 MonoBehaviour:
   m_ObjectHideFlags: 0
