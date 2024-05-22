@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 26323751}
   m_Layer: 0
   m_Name: highlyDamagedPlatformPlayerCanJumpOn (10)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 105669033}
   m_Layer: 0
   m_Name: highlyDamagedPlatformPlayerCanJumpOn (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -499,7 +499,7 @@ GameObject:
   - component: {fileID: 141721737}
   m_Layer: 0
   m_Name: KEYFORDECORATION__UPLOAD TOMMOROW (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -742,7 +742,7 @@ GameObject:
   - component: {fileID: 278115204}
   m_Layer: 0
   m_Name: DirtyPlatformPlayerCanJumpOn (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1151,7 +1151,7 @@ GameObject:
   - component: {fileID: 589230618}
   m_Layer: 0
   m_Name: BrokenCrateSpriteForDecoration (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1343,6 +1343,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lamp_ForDecoration (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5726263562258583721, guid: a5c5c6589c3efd74298f30886a643b2f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1477,6 +1481,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lamp_ForDecoration (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5726263562258583721, guid: a5c5c6589c3efd74298f30886a643b2f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1554,7 +1562,7 @@ GameObject:
   - component: {fileID: 678333213}
   m_Layer: 0
   m_Name: LadderForDecorationRO (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1638,7 +1646,7 @@ GameObject:
   - component: {fileID: 680893279}
   m_Layer: 0
   m_Name: highlyDamagedPlatformPlayerCanJumpOn (3)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2601,6 +2609,10 @@ PrefabInstance:
     - target: {fileID: 5726263562258583721, guid: a5c5c6589c3efd74298f30886a643b2f, type: 3}
       propertyPath: m_Name
       value: Lamp_ForDecoration (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5726263562258583721, guid: a5c5c6589c3efd74298f30886a643b2f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11977,7 +11989,7 @@ GameObject:
   - component: {fileID: 1227106377}
   m_Layer: 0
   m_Name: highlyDamagedPlatformPlayerCanJumpOn (4)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12206,7 +12218,7 @@ GameObject:
   - component: {fileID: 1347558222}
   m_Layer: 0
   m_Name: Foreground
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15472,6 +15484,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lamp_ForDecoration (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5726263562258583721, guid: a5c5c6589c3efd74298f30886a643b2f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15494,7 +15510,7 @@ GameObject:
   - component: {fileID: 1598544709}
   m_Layer: 0
   m_Name: BlackBackgroundForCover
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15578,7 +15594,7 @@ GameObject:
   - component: {fileID: 1730394231}
   m_Layer: 0
   m_Name: highlyDamagedPlatformPlayerCanJumpOn (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15662,7 +15678,7 @@ GameObject:
   - component: {fileID: 1776276472}
   m_Layer: 0
   m_Name: highlyDamagedPlatformPlayerCanJumpOn (9)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15746,7 +15762,7 @@ GameObject:
   - component: {fileID: 1787385517}
   m_Layer: 0
   m_Name: DirtyPlatformPlayerCanJumpOn (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15964,7 +15980,7 @@ GameObject:
   - component: {fileID: 1796293618}
   m_Layer: 0
   m_Name: highlyDamagedPlatformPlayerCanJumpOn (5)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16140,6 +16156,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lamp_ForDecoration (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5726263562258583721, guid: a5c5c6589c3efd74298f30886a643b2f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16230,7 +16250,7 @@ GameObject:
   - component: {fileID: 1858240322}
   m_Layer: 0
   m_Name: DirtyPlatformPlayerCanJumpOn (3)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16314,7 +16334,7 @@ GameObject:
   - component: {fileID: 1879194185}
   m_Layer: 0
   m_Name: highlyDamagedPlatformPlayerCanJumpOn (7)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18062,7 +18082,7 @@ GameObject:
   - component: {fileID: 1966588185}
   m_Layer: 0
   m_Name: PlatformPlayerCanJumpOn (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18280,7 +18300,7 @@ GameObject:
   - component: {fileID: 2006626747}
   m_Layer: 0
   m_Name: highlyDamagedPlatformPlayerCanJumpOn (8)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18551,6 +18571,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lamp_ForDecoration (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5726263562258583721, guid: a5c5c6589c3efd74298f30886a643b2f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18704,7 +18728,7 @@ GameObject:
   - component: {fileID: 2093377526}
   m_Layer: 0
   m_Name: highlyDamagedPlatformPlayerCanJumpOn (6)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18835,8 +18859,60 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 99237319258151759, guid: 942e18ba9636b4149b0957ae6c7d1fa2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1103557361487622357}
   m_SourcePrefab: {fileID: 100100000, guid: 942e18ba9636b4149b0957ae6c7d1fa2, type: 3}
+--- !u!1 &1103557361487622356 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 99237319258151759, guid: 942e18ba9636b4149b0957ae6c7d1fa2, type: 3}
+  m_PrefabInstance: {fileID: 1103557361487622355}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1103557361487622357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103557361487622356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1 &3509080763367474258 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7983848018676095286, guid: 0a001559d76510d47969eb963dead2ae, type: 3}
@@ -18890,6 +18966,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1885141596981565340, guid: 0a001559d76510d47969eb963dead2ae, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 8837141501501552596}
     - target: {fileID: 7983848018676095286, guid: 0a001559d76510d47969eb963dead2ae, type: 3}
       propertyPath: m_Name
       value: Ryan_Player
@@ -18902,6 +18982,11 @@ PrefabInstance:
 --- !u!4 &8837141501501552589 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1693684158833475869, guid: 0a001559d76510d47969eb963dead2ae, type: 3}
+  m_PrefabInstance: {fileID: 5164128548187848929}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &8837141501501552596 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 7483431270467086808, guid: 0a001559d76510d47969eb963dead2ae, type: 3}
   m_PrefabInstance: {fileID: 5164128548187848929}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807

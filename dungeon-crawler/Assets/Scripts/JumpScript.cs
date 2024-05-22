@@ -15,14 +15,15 @@ public class JumpScript : MonoBehaviour
 
     public void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
-
-    public void Update()
+    
+    public void OnJumpInput(InputAction.CallbackContext context)
     {
-      if (Input.GetButtonDown("Jump"))
+        if (context.performed)
         {
             rb.AddForce(new Vector2(rb.velocity.x, jump));
+            Debug.Log("Jump");
         }
     }
 }

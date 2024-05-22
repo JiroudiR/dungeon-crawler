@@ -335,8 +335,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55c92b0df7b703942992b05b4972c2cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 5490666356332871549}
-  jumpSpeed: 8
+  speed: 5
+  jump: 450
+  rb: {fileID: 5490666356332871549}
 --- !u!60 &540762259620049441
 PolygonCollider2D:
   m_ObjectHideFlags: 0
