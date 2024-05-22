@@ -14,8 +14,6 @@ public class EnemyAnimator : MonoBehaviour
     public Animator enemyAnimator = null;
 
     [Header("Animator Parameter Names")]
-    [Tooltip("The name of the boolean parameter in the animator which causes a transition to the idle state")]
-    public string IdleAnimatorParameter = "isIdle";
     [Tooltip("The name of the boolean parameter in the animator which causes a transition to the walking/moving state")]
     public string MovingAnimatorParameter = "isWalking";
     [Tooltip("The name of the trigger parameter in the animator which causes a transition to the dead state")]
@@ -60,16 +58,6 @@ public class EnemyAnimator : MonoBehaviour
     {
         if (enemyComponent != null && enemyAnimator != null)
         {
-            // Handle idle state
-            if (enemyComponent.enemyState == EnemyBase.EnemyState.Idle)
-            {
-                enemyAnimator.SetBool(IdleAnimatorParameter, true);
-            }
-            else
-            {
-                enemyAnimator.SetBool(IdleAnimatorParameter, false);
-            }
-
             // Handle moving state
             if (enemyComponent.enemyState == EnemyBase.EnemyState.Walking)
             {
