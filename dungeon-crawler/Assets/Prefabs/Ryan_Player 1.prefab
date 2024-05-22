@@ -333,7 +333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ccdb2239a623e49ae55ef6b8a1b1d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 12
+  walkSpeed: 6
   _isMoving: 0
   _isRunning: 0
   _isFacingRight: 1
@@ -366,8 +366,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55c92b0df7b703942992b05b4972c2cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 7483431270467086808}
-  jumpSpeed: 8
+  speed: 0
+  jump: 0
+  rb: {fileID: 0}
 --- !u!70 &1252540727768403732
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

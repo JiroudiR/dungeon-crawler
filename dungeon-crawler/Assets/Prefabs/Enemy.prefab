@@ -198,7 +198,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1303075433268564294}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: b11d2fed9395adf4d824cdc13bafd624, type: 2}
   m_CullingMode: 0
@@ -324,14 +324,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1303075433268564294}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4472bfcf4de1bd440890a6c7db9795d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyComponent: {fileID: 3990534151721492726}
   enemyAnimator: {fileID: 7879024924151539774}
-  IdleAnimatorParameter: isIdle
   MovingAnimatorParameter: isWalking
   DeadAnimatorParameter: isDead
 --- !u!114 &8632955357802599412
