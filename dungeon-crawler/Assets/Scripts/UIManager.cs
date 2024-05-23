@@ -58,4 +58,14 @@ public class UIManager : MonoBehaviour
         gameOverText.SetActive(input);
         //gameOverText = FindObjectOfType<Health_Damage>().gameOver;
     }
+
+
+
+
+
+
+
+
+
+
 }
