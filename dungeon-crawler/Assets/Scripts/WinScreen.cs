@@ -20,7 +20,7 @@ public class WinScreen : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "WIN")
+        if (collision.tag == "Player")
         {
             WINTEXT.gameObject.SetActive(true);
         }

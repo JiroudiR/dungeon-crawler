@@ -20,7 +20,7 @@ public class gameOverScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
        
-        if (collision.tag == "Spike")
+        if (collision.tag == "Player")
         {
             GameOverText.gameObject.SetActive(true);
         }
