@@ -43,19 +43,16 @@ public class Player_HD : MonoBehaviour
     private void InflictDamage()
     {
         health--;
-
-        uiManager.SetHealth(health);
+        /*uiManager.SetHealth(health);
         uiManager.SetHealthCount();
-        uiManager.SetLivesCount();
+        uiManager.SetLivesCount();*/
         if (health == 0)
-
         {
             isAlive = false;
             lives--;
             //gameObject.SetActive(false);
             uiManager.SetYouHaveDiedText(true);
         }
-
         uiManager.SetHealth(health);
         uiManager.SetHealthCount();
         uiManager.SetLivesCount();

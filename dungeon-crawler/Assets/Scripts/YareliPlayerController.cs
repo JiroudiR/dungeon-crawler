@@ -14,7 +14,7 @@ public class YareliPlayerController : MonoBehaviour
     private bool _isMoving = false;
 
 
-    public bool IsMoving 
+    public bool IsMoving
     {
         get
         {
@@ -53,7 +53,7 @@ public class YareliPlayerController : MonoBehaviour
         }
         private set
         {
-            if(_isFacingRight != value)
+            if (_isFacingRight != value)
             {
                 //Flip the local scale to make the player face the opposite direction
                 transform.localScale *= new Vector2(-1, 1);
@@ -67,6 +67,12 @@ public class YareliPlayerController : MonoBehaviour
     Animator animator;
     public GameObject projectilePrefab;
     public Transform firePoint;
+    private Player_HD playerHD;
+
+    private void Start()
+    {
+        playerHD = GetComponent<Player_HD>();
+    }
 
     private void Awake()
     {
@@ -104,11 +110,11 @@ public class YareliPlayerController : MonoBehaviour
 
     public void OnRun(InputAction.CallbackContext context)
     {
-        if(context.started)
+        if (context.started)
         {
             IsRunning = true;
         }
-        else if(context.canceled)
+        else if (context.canceled)
         {
             IsRunning = false;
         }
@@ -120,6 +126,15 @@ public class YareliPlayerController : MonoBehaviour
         {
             Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
             Debug.Log("Shots fired");
+        }
+    }
+
+    public void OnRestartInput(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            playerHD.Respawn();
+            Debug.Log("Respawn");
         }
     }
 
