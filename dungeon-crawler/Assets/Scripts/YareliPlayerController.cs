@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+
 public class YareliPlayerController : MonoBehaviour
 {
     public float walkSpeed = 6f;
@@ -118,6 +120,14 @@ public class YareliPlayerController : MonoBehaviour
         {
             Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
             Debug.Log("Shots fired");
+        }
+    }
+
+    public void OnQuitInput(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            SceneManager.LoadScene("MainMenuScene");
         }
     }
 }

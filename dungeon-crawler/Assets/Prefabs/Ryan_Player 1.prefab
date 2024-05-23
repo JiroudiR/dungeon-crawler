@@ -47,7 +47,6 @@ GameObject:
   - component: {fileID: 2922936805696547050}
   - component: {fileID: 3133292949502101464}
   - component: {fileID: 1885141596981565340}
-  - component: {fileID: 2854127449756573992}
   - component: {fileID: 1252540727768403732}
   m_Layer: 0
   m_Name: Ryan_Player 1
@@ -298,9 +297,9 @@ MonoBehaviour:
     m_ActionName: Player/Restart[/Keyboard/r]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2854127449756573992}
-        m_TargetAssemblyTypeName: Pause, Assembly-CSharp
-        m_MethodName: OnPauseInput
+      - m_Target: {fileID: 2922936805696547050}
+        m_TargetAssemblyTypeName: YareliPlayerController, Assembly-CSharp
+        m_MethodName: OnQuitInput
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -386,19 +385,6 @@ MonoBehaviour:
   speed: 5
   jump: 450
   rb: {fileID: 7483431270467086808}
---- !u!114 &2854127449756573992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7983848018676095286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24f7d607c589d9e47a2bd05f04abf08b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseScreen: {fileID: 0}
 --- !u!70 &1252540727768403732
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
