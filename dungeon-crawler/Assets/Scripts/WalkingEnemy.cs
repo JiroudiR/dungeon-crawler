@@ -101,7 +101,7 @@ public class WalkingEnemy : EnemyBase
     /// </summary>
     private void DetermineWalkDirection()
     {
-        if (TestWall() || GetIsNearEdge())
+        if (TestWall() )
         {
             TurnAround();
         }
