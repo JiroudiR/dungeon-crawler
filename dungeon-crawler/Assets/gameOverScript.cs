@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-public class WinScreen : MonoBehaviour
+using TMPro;
+public class gameOverScript : MonoBehaviour
 {
+    public TMP_Text GameOverText;
     // Start is called before the first frame update
-    public Text WINTEXT;
     void Start()
     {
         
@@ -17,12 +17,12 @@ public class WinScreen : MonoBehaviour
     {
         
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "WIN")
+       
+        if (collision.tag == "Spike")
         {
-            WINTEXT.gameObject.SetActive(true);
+            GameOverText.gameObject.SetActive(true);
         }
     }
 }
