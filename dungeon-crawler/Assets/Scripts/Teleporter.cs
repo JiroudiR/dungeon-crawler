@@ -5,14 +5,10 @@ using UnityEngine;
 public class Teleporter : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Transform destination;
 
-    // Update is called once per frame
-    void Update()
+    public Transform GetDestination()
     {
-        
+        return destination;
     }
 }
