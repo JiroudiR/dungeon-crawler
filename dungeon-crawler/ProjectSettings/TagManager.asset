@@ -10,6 +10,7 @@ TagManager:
   - Ground
   - WIN
   - Spike
+  - Teleporter
   layers:
   - Default
   - TransparentFX
