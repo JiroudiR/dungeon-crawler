@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,6 +14,7 @@ public class JumpScript : MonoBehaviour
 
     public Rigidbody2D rb;
     bool isJumping = false;
+    bool isGrounded = true;
 
     public void Start()
     {
@@ -21,18 +23,22 @@ public class JumpScript : MonoBehaviour
     
     public void OnJumpInput(InputAction.CallbackContext context)
     {
-        if (context.performed && !isJumping)
+        if (context.performed && !isJumping && isGrounded)
         {
             rb.AddForce(new Vector2(rb.velocity.x, jump));
-            StartCoroutine("JumpDelay");
             isJumping = true;
+            isGrounded = false;
             Debug.Log("Jump");
         }
     }
 
-    IEnumerator JumpDelay()
+    public void OnCollisionEnter2D(Collision2D collision)
     {
-        yield return new WaitForSeconds(1.25f);
-        isJumping = false;
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            isJumping = false;
+            isGrounded = true;
+            Debug.Log("Player is grounded");
+        }
     }
 }
