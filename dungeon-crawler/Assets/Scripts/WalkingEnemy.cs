@@ -107,7 +107,7 @@ public class WalkingEnemy : EnemyBase
         }
         if (spriteRenderer != null)
         {
-            spriteRenderer.flipX = (walkDirection == WalkDirections.Right);
+            spriteRenderer.flipX = (walkDirection == WalkDirections.Left);
         }
     }
 

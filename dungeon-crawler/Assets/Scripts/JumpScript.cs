@@ -12,6 +12,7 @@ public class JumpScript : MonoBehaviour
     private float Move;
 
     public Rigidbody2D rb;
+    bool isJumping = false;
 
     public void Start()
     {
@@ -20,10 +21,18 @@ public class JumpScript : MonoBehaviour
     
     public void OnJumpInput(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && !isJumping)
         {
             rb.AddForce(new Vector2(rb.velocity.x, jump));
+            StartCoroutine("JumpDelay");
+            isJumping = true;
             Debug.Log("Jump");
         }
+    }
+
+    IEnumerator JumpDelay()
+    {
+        yield return new WaitForSeconds(1.25f);
+        isJumping = false;
     }
 }

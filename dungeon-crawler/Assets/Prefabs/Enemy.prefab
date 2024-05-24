@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5883774780185613150}
   - component: {fileID: 4952557964207812649}
   - component: {fileID: 4965254931161023803}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WallTestRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 3990534151721492726}
   - component: {fileID: 1360848746471689971}
   - component: {fileID: 8632955357802599412}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -233,7 +233,7 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -316,7 +316,7 @@ MonoBehaviour:
   leftEdge: {fileID: 6761797682339787962}
   rightEdge: {fileID: 2848959573549344180}
   walkDirection: 0
-  willTurnAroundAtEdge: 0
+  willTurnAroundAtEdge: 1
 --- !u!114 &1360848746471689971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,13 +357,13 @@ GameObject:
   - component: {fileID: 4346251393901378064}
   - component: {fileID: 2271587326152168828}
   - component: {fileID: 6761797682339787962}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GroundTestLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4346251393901378064
 Transform:
   m_ObjectHideFlags: 0
@@ -438,7 +438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundLayers:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 64
   groundCheckCollider: {fileID: 2271587326152168828}
   landingEffect: {fileID: 0}
   groundedLastCheck: 0
@@ -453,13 +453,13 @@ GameObject:
   - component: {fileID: 5586193768230714193}
   - component: {fileID: 6058011659504322025}
   - component: {fileID: 2848959573549344180}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GroundTestRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5586193768230714193
 Transform:
   m_ObjectHideFlags: 0
@@ -534,7 +534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundLayers:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 64
   groundCheckCollider: {fileID: 6058011659504322025}
   landingEffect: {fileID: 0}
   groundedLastCheck: 0
@@ -549,7 +549,7 @@ GameObject:
   - component: {fileID: 8790701147768002060}
   - component: {fileID: 4304213794564006813}
   - component: {fileID: 7522804458624518651}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WallTestLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
