@@ -523,7 +523,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!60 &105669037
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1179,7 +1179,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!60 &278115208
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2196,7 +2196,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!60 &680893283
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3768,7 +3768,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!60 &1227106381
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -8229,7 +8229,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!60 &1730394235
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -8397,7 +8397,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!60 &1776276476
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -8565,7 +8565,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!60 &1787385521
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -8867,7 +8867,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!60 &1796293622
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -9185,7 +9185,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!60 &1858240326
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -9353,7 +9353,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!60 &1879194189
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -9750,7 +9750,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!1 &1975715063
 GameObject:
   m_ObjectHideFlags: 0
@@ -9997,7 +9997,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!60 &2006626751
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -10517,7 +10517,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!60 &2093377530
 PolygonCollider2D:
   m_ObjectHideFlags: 0
