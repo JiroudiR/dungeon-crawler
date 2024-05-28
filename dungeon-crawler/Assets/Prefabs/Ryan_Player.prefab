@@ -311,6 +311,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 32f0b547-3f8b-4522-a977-68d59f6525f4
     m_ActionName: Player/Restart[/Keyboard/r]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2922936805696547050}
+        m_TargetAssemblyTypeName: YareliPlayerController, Assembly-CSharp
+        m_MethodName: OnWinInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7d2d13ad-d777-477c-ba04-8fd0e4c2005a
+    m_ActionName: Player/Win[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

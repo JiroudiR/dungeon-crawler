@@ -7,6 +7,7 @@ public class WinScreen : MonoBehaviour
 {
     public Text WINTEXT;
     [HideInInspector] public PickUpScript pickUp;
+    [HideInInspector] public bool win = false;
 
     void Start()
     {
@@ -18,6 +19,7 @@ public class WinScreen : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && pickUp.keyCollected == true)
         {
             WINTEXT.gameObject.SetActive(true);
+            win = true;
         }
     }
 }
