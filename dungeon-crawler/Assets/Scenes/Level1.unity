@@ -222,6 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WINTEXT: {fileID: 1516222718}
+  pickUp: {fileID: 0}
 --- !u!61 &26323755
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -695,8 +696,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9de0c41658761884fa2d925481c6a062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!58 &141721740
-CircleCollider2D:
+  keyCollected: 0
+--- !u!60 &141721740
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -727,9 +729,27 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.67499024, y: 0.53186834}
-  serializedVersion: 2
-  m_Radius: 3.1472485
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.72, y: 6.72}
+    newSize: {x: 6.72, y: 6.72}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -1.89, y: 3.1699998}
+      - {x: -1.91, y: 3.1499999}
+      - {x: -1.91, y: -2.9399998}
+      - {x: -1.89, y: -2.96}
+      - {x: 2.1, y: -2.96}
+      - {x: 2.12, y: -2.9399998}
+      - {x: 2.12, y: 3.1499999}
+      - {x: 2.1, y: 3.1699998}
+  m_UseDelaunayMesh: 0
 --- !u!1001 &180201910
 PrefabInstance:
   m_ObjectHideFlags: 0

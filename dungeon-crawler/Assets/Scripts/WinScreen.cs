@@ -5,22 +5,17 @@ using UnityEngine.UI;
 
 public class WinScreen : MonoBehaviour
 {
-    // Start is called before the first frame update
     public Text WINTEXT;
+    [HideInInspector] public PickUpScript pickUp;
+
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        pickUp = FindObjectOfType<PickUpScript>().GetComponent<PickUpScript>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.gameObject.CompareTag("Player") && pickUp.keyCollected == true)
         {
             WINTEXT.gameObject.SetActive(true);
         }
