@@ -68,10 +68,12 @@ public class YareliPlayerController : MonoBehaviour
     public GameObject projectilePrefab;
     public Transform firePoint;
     private Player_HD playerHD;
+    private WinScreen winScreen;
 
     private void Start()
     {
         playerHD = GetComponent<Player_HD>();
+        winScreen = FindObjectOfType<WinScreen>().GetComponent<WinScreen>();
     }
 
     private void Awake()
@@ -143,6 +145,14 @@ public class YareliPlayerController : MonoBehaviour
         if (context.performed)
         {
             SceneManager.LoadScene("MainMenuScene");
+        }
+    }
+
+    public void OnWinInput(InputAction.CallbackContext context)
+    {
+        if (context.performed && winScreen.win)
+        {
+            SceneManager.LoadScene("Level2");
         }
     }
 }
