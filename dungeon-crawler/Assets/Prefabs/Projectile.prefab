@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   lifeTime: 5
+  fireRate: 1
   projectilePrefab: {fileID: 455678201637531169}
 --- !u!50 &-8449800431486591925
 Rigidbody2D:
