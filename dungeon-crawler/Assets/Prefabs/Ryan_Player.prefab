@@ -367,12 +367,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 6
   _isMoving: 0
-  fireRate: 1
   _isRunning: 0
   _isFacingRight: 1
   projectilePrefab: {fileID: 455678201637531169, guid: c042f48694cc61f449330f1050e8f706, type: 3}
   firePoint: {fileID: 4681567800752571128}
-  player: {fileID: 7983848018676095286}
 --- !u!114 &3133292949502101464
 MonoBehaviour:
   m_ObjectHideFlags: 0
