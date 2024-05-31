@@ -13,12 +13,6 @@ public class UIManager : MonoBehaviour
     public GameObject gameOverText;
     public GameObject youHaveDiedText;
     public GameObject player;
-    private Player_HD hDScript;
-
-    private void Start()
-    {
-        hDScript = FindObjectOfType<YareliPlayerController>().GetComponent<Player_HD>();
-    }
 
         
     
