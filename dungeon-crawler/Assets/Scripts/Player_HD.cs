@@ -13,10 +13,16 @@ public class Player_HD : MonoBehaviour
     private Vector3 respawnPoint;
     //public GameObject gameOver;
     private UIManager uiManager;
+    private SpriteRenderer spriteRenderer;
+    private YareliPlayerController yareliPlayerController;
+    private JumpScript jump;
     internal int teamId;
 
     private void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        yareliPlayerController = GetComponent<YareliPlayerController>();
+        jump = GetComponent<JumpScript>();
         uiManager = FindObjectOfType<UIManager>().GetComponent<UIManager>();
         uiManager.SetHealth(health);
         uiManager.SetHealthCount();
@@ -43,14 +49,13 @@ public class Player_HD : MonoBehaviour
     private void InflictDamage()
     {
         health--;
-        /*uiManager.SetHealth(health);
-        uiManager.SetHealthCount();
-        uiManager.SetLivesCount();*/
         if (health == 0)
         {
             isAlive = false;
             lives--;
-            //gameObject.SetActive(false);
+            spriteRenderer.enabled = false;
+            yareliPlayerController.enabled = false;
+            jump.enabled = false;
             uiManager.SetYouHaveDiedText(true);
         }
         uiManager.SetHealth(health);
@@ -66,12 +71,14 @@ public class Player_HD : MonoBehaviour
     {
         if (!isAlive && !isGameOver)
         {
+            spriteRenderer.enabled = true;
+            yareliPlayerController.enabled = true;
+            jump.enabled = true;
             isAlive = true;
             health = 3;
             uiManager.SetYouHaveDiedText(false);
             uiManager.SetHealth(health);
             uiManager.SetHealthCount();
-            gameObject.SetActive(true);
             transform.position = respawnPoint;
         }
         if (lives != 0)

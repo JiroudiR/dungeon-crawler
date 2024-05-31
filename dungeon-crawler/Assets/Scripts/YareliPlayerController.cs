@@ -12,6 +12,8 @@ public class YareliPlayerController : MonoBehaviour
 
     [SerializeField]
     private bool _isMoving = false;
+    private bool canShoot = true;
+    public float fireRate = 1f;
 
 
     public bool IsMoving
@@ -124,8 +126,10 @@ public class YareliPlayerController : MonoBehaviour
 
     public void OnFireInput(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && canShoot)
         {
+            canShoot = false;
+            StartCoroutine("FireRate");
             Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
             Debug.Log("Shots fired");
         }
@@ -152,7 +156,19 @@ public class YareliPlayerController : MonoBehaviour
     {
         if (context.performed && winScreen.win)
         {
-            SceneManager.LoadScene("Level2");
+            if (SceneManager.GetActiveScene().name == "Level1")
+            {
+                SceneManager.LoadScene("Level2");
+            } else if (SceneManager.GetActiveScene().name == "Level2")
+            {
+                SceneManager.LoadScene("MainMenuScene");
+            }
         }
+    }
+
+    IEnumerator FireRate()
+    {
+        yield return new WaitForSeconds(fireRate);
+        canShoot = true;
     }
 }
